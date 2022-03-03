@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool) # True
 #DEBUG = False
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','ec2-3-19-255-189.us-east-2.compute.amazonaws.com']
 #ALLOWED_HOSTS = ['127.0.0.1', 'amazingkart.herokuapp.com']
 
 
