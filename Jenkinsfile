@@ -32,7 +32,7 @@ pipeline {
         stage('Mail Notification') {
             steps {
                 echo 'Mail Report'
-                emailext body: 'Test demo', subject: 'Sample Demo', to: '458narayana@gmail.com'
+                mail bcc: '', body: 'Heyyyyyyyyyyyyyyyyy ', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: '6reddy6@gmail.com'
       
             }
         }
