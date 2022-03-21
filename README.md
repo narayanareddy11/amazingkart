@@ -1,2 +1,3 @@
+step1 : 
 
-ci/cd test in jenkins
+:python manage.py runserver
