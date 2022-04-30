@@ -9,7 +9,7 @@ class YourTestClass(TestCase):
         pass
 
     def test_something_that_will_pass(self):
-        self.assertFalse(False)
+        self.assertFalse(True)
 
     def test_something_that_will_fail(self):
-        self.assertTrue(False)
+        self.assertTrue(True)
