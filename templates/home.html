@@ -5,6 +5,66 @@
 
 {% block content %}
 
+<style type="text/css">
+
+	#slider {
+		overflow: hidden;
+	}
+	#slider figure {
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+	}
+	#slider figure img {
+		width: 20%;
+		float: left;
+	}
+	
+	@keyframes slider {
+		0% {
+			left: 0;
+		}
+		20% {
+			left: 0;
+		}
+		25% {
+			left: -100%;
+		}
+		45% {
+			left: -100%;
+		}
+		50% {
+			left: -200%;
+		}
+		70% {
+			left: -200%;
+		}
+		75% {
+			left: -300%;
+		}
+		95% {
+			left: -300%;
+		}
+		100% {
+			left: -400%;
+		}
+	}
+	
+</style>
+<div id="slider">
+	<figure>
+
+		
+		<img src="{% static 'desk1.png' %}">
+		<img src="{% static 'desk22.png' %}">
+		<img src="{% static 'desk1.png' %}">
+		<img src="{% static 'desk4.png' %}">
+		<img src="{% static 'desk5.png' %}">
+
+	</figure>
+</div>
 
 
 <!-- ========================= SECTION MAIN ========================= -->
@@ -12,8 +72,16 @@
 <div class="container">
 
 <div class="intro-banner-wrap">
-	<img src="{% static 'images/banners/cover.jpg' %}" class="img-fluid rounded">
+	<a href="{% url 'book1' %}" class="img-fluid rounded">
+	<img src="{% static 'desk.jpg' %}" class="img-fluid rounded">
+	</a> 
+	  
 </div>
+
+
+
+
+
 
 </div> <!-- container //  -->
 </section>
@@ -36,7 +104,7 @@
 			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
 			<figcaption class="info-wrap">
 				<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
-				<div class="price mt-1">$ {{ product.price }}</div> <!-- price-wrap.// -->
+				<div class="price mt-1">£{{ product.price }}</div> <!-- price-wrap.// -->
 				<div class="rating-star">
 					<span>
 						<i class="fa fa-star{% if product.averageReview < 0.5 %}-o{% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
