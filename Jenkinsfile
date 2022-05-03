@@ -6,8 +6,8 @@ pipeline {
                 echo 'Clean the workspace'
           
                 cleanWs()
-                sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\db.sqlite3 .'
-                sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\.env .'
+             //  sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\db.sqlite3 .'
+             //  sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\.env .'
             }
         }
         stage('workspace clone') {
