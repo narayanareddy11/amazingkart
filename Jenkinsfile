@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Clean the workspace'
           
-                cleanWs()
+             //   cleanWs()
              //  sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\db.sqlite3 .'
              //  sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\.env .'
             }
