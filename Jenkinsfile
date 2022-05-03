@@ -36,7 +36,7 @@ pipeline {
         stage('artifacts') {
             steps {
                 echo 'archiveArtifacts for kart setup'
-                archiveArtifacts artifacts: 'templates', followSymlinks: false
+                archiveArtifacts artifacts: 'templates/', followSymlinks: false
             }
         }
         stage('Mail Notification') {
