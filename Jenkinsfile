@@ -4,11 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Clean the workspace'
-                sh 'cp -r db.sqlite3 ../'
-                sh 'cp -r .env ../'
+          
                 cleanWs()
-                sh 'cp -r ../db.sqlite3 .'
-                sh 'cp -r ../.env .'
+                sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\db.sqlite3 .'
+                sh 'cp -r C:\Users\Administrator\Desktop\amazingkart\.env .'
             }
         }
         stage('workspace clone') {
