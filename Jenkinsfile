@@ -42,7 +42,8 @@ pipeline {
         stage('Mail Notification') {
             steps {
                 echo 'Mail Report'
-                mail bcc: '', body:  $env.JENKINS_URL'job succus amazingkart  Running ${env.BUILD_ID} on ${env.JENKINS_URL} ', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: '6reddy6@gmail.com'
+                mail bcc: '', body:"""<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+        <p>Check console amazing kart status output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""", cc: '', from: '', replyTo: '', subject: 'Jenkins status from amazingkart ', to: '6reddy6@gmail.com'
       
             }
         }
