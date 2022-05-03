@@ -21,7 +21,7 @@ pipeline {
         stage('Test server') {
             steps {
                 echo 'Test the server'
-                sh 'python manage.py test'
+              //  sh 'python manage.py test'
     
             }
         }
