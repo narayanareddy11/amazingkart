@@ -28,6 +28,7 @@ pipeline {
         stage('Runserver') {
             steps {
                 echo 'Clean the workspace'
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "python manage.py runserver"
     
             }
@@ -41,7 +42,7 @@ pipeline {
         stage('Mail Notification') {
             steps {
                 echo 'Mail Report'
-                mail bcc: '', body: 'Hello Lewis ', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: '6reddy6@gmail.com'
+                mail bcc: '', body: 'job succus amazingkart  Running ${env.BUILD_ID} on ${env.JENKINS_URL} ', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: '6reddy6@gmail.com'
       
             }
         }
